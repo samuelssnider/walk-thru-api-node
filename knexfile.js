@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection:'postgres://localhost/walk_thru',
+    connection:'postgres://localhost/walk_thrus',
     migrations: {
       directory: './db/migrations'
     },
@@ -13,7 +13,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection:'postgres://localhost/walk_thru_text',
+    connection:'postgres://localhost/walk_thrus_text',
     migrations: {
       directory: './db/migrations'
     },
