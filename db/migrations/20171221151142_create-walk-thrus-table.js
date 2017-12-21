@@ -9,6 +9,6 @@ exports.up = function(knex, Promise) {
 }
 
 exports.down = function(knex, Promise) {
-  let dropQuery = `DROP TABLE secrets`
+  let dropQuery = `DROP TABLE walk_thrus`
   return knex.raw(dropQuery)
 }
