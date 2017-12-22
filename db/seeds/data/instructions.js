@@ -1,18 +1,20 @@
 var faker = require('faker')
 var knex = require('knex')
 
-var random_instruction = {
-  title: faker.name.findName(),
-  content: faker.lorem.sentence(),
-  img_source: faker.image.imageUrl(),
-  created_at: new Date,
-  stepid: Math.floor(Math.random() * (3 - 1)) + 1
+function generateRandomInstruction(i) {
+  return random_instruction = {
+    title: faker.name.findName(i),
+    content: faker.lorem.sentence(i),
+    img_source: faker.image.imageUrl(i),
+    created_at: new Date,
+    stepid: (Math.floor(Math.random() * 3)) + 1
+  }
 }
 
 const instructions = []
 
 for(var i = 0; i < 10; i ++){
-  instructions.push(random_instruction)
+  instructions.push(generateRandomInstruction(i))
 }
 
 module.exports = { instructions }

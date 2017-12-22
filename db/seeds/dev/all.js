@@ -17,7 +17,6 @@ exports.seed = function(knex, Promise) {
     return knex('steps').insert(steps['steps']);
   })
   .then(function () {
-    console.log(instructions)
     return knex('instructions').insert(instructions['instructions']);
   })
 };

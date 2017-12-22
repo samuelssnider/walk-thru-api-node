@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   let createQuery = `CREATE TABLE instructions(
     id SERIAL PRIMARY KEY NOT NULL,
-    title VARCHAR (30) UNIQUE,
+    title VARCHAR (30),
     content TEXT,
     img_source TEXT,
     created_at TIMESTAMP,
