@@ -4,6 +4,7 @@ const database = require('knex')(configuration);
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
+var walkThru = require('./lib/controllers/walk_thrus')
 
 
 app.locals.title = "Walk Through API"
@@ -12,6 +13,8 @@ app.set('port', process.env.PORT || 3000)
 app.get('/', function(request, response) {
   response.send("Replace with API docs")
 })
+
+app.get('/walk_thrus', walkThru.getWalkThrus )
 
 
 if (!module.parent) {
