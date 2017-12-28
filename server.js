@@ -14,8 +14,9 @@ app.get('/', function(request, response) {
   response.send("Replace with API docs")
 })
 
-app.get('/walk_thrus', walkThru.getWalkThrus )
+app.get('/api/v1/walk_thrus', walkThru.getWalkThrus )
 
+app.get('/api/v1/walk_thrus/:id', walkThru.getWalkThru )
 
 if (!module.parent) {
   app.listen(app.get('port'), function() {
