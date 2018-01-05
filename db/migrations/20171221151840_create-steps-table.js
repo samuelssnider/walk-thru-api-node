@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     title VARCHAR (30),
     description TEXT,
     created_at TIMESTAMP,
+    img_source TEXT,
     walk_thruID INTEGER,
     FOREIGN KEY (walk_thruID) REFERENCES walk_thrus(id)
   )`

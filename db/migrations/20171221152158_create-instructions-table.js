@@ -3,7 +3,6 @@ exports.up = function(knex, Promise) {
     id SERIAL PRIMARY KEY NOT NULL,
     title VARCHAR (30),
     content TEXT,
-    img_source TEXT,
     created_at TIMESTAMP,
     stepID INTEGER,
     FOREIGN KEY (stepID) REFERENCES steps(id)
