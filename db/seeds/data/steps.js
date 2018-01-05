@@ -1,3 +1,4 @@
+var faker = require('faker')
 const steps = 
 [
   {
@@ -13,7 +14,6 @@ const steps =
     description: 'Go buy that too!',
     created_at: new Date,
     img_source: faker.image.imageUrl(26)
-    
   },
   {
     walk_thruid: 1,
@@ -49,7 +49,7 @@ const steps =
     walk_thruid: 3,
     title: 'Buy the game', 
     description: 'Purchase!',
-    created_at: new Date
+    created_at: new Date,
     img_source: faker.image.imageUrl(31)
   },
   {
