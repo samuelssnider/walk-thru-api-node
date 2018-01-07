@@ -5,9 +5,25 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
 var walkThru = require('./lib/controllers/walk_thrus')
+app.use(require('morgan')('dev'));
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(session({
+  name: 'server-session-cookie-id',
+  secret: 'my express secret',
+  saveUninitialized: true,
+  resave: true,
+  store: new FileStore()
+}));
+
+app.use(function printSession(req, res, next) {
+  console.log('req.session', req.session);
+  return next();
+});
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
