@@ -7,7 +7,7 @@ const users = [{
 
 function createRandomUser(i) {
   return randomUser = {
-    name: faker.internet.userName(i),
+    username: faker.internet.userName(i),
     password: faker.internet.userName(i),
     created_at: new Date
   }
