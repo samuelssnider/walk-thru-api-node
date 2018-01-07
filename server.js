@@ -46,7 +46,7 @@ app.get('/api/v1/walk_thrus/:id', walkThru.getWalkThru )
 
 app.post('/api/v1/walk_thrus', walkThru.createWalkThru )
 
-app.get('api/v1/steps/id', step.getStep)
+app.get('/api/v1/steps/:id', step.getStep )
 
 if (!module.parent) {
   app.listen(app.get('port'), function() {
