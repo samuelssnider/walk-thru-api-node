@@ -6,6 +6,7 @@ var app = express()
 var bodyParser = require('body-parser');
 var walkThru = require('./lib/controllers/walk_thrus')
 var step = require('./lib/controllers/steps')
+var category = require('./lib/controllers/categories')
 app.use(require('morgan')('dev'));
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
@@ -47,6 +48,8 @@ app.get('/api/v1/walk_thrus/:id', walkThru.getWalkThru )
 app.post('/api/v1/walk_thrus', walkThru.createWalkThru )
 
 app.get('/api/v1/steps/:id', step.getStep )
+
+app.get('/api/v1/categories', category.getCategories )
 
 if (!module.parent) {
   app.listen(app.get('port'), function() {
