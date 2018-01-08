@@ -23,7 +23,7 @@ app.use(session({
 }));
 
 app.use(function printSession(req, res, next) {
-  console.log('req.session', req.session);
+  // console.log('req.session', req.session);
   return next();
 });
 
