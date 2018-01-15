@@ -1,5 +1,6 @@
 To get started, clone or fork my repository at:
 [walk-thru-api-node](https://github.com/samuelssnider/walk-thru-api-node)
+
 Install the necessary packages using npm:
 ```
 npm install
