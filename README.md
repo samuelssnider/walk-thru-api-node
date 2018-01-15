@@ -7,8 +7,9 @@ npm install
 ```
 Create the database using psql (if you do not have psql installed, try looking [here](https://launchschool.com/blog/how-to-install-postgresql-on-a-mac))
 ```
-CREATE DATABASE walk_thrus;
-CREATE DATABASE walk_thrus_text;
+$ psql
+# CREATE DATABASE walk_thrus;
+# CREATE DATABASE walk_thrus_text;
 ```
 
 To get the database running:
