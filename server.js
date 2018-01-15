@@ -12,8 +12,8 @@ var step = require('./lib/controllers/steps')
 var category = require('./lib/controllers/categories')
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
-var apiDocs = require('./lib/views/apiDocs.html')
 var path    = require("path");
+
 
 
 // app.use(session({
@@ -39,7 +39,9 @@ app.use((req, res, next) => {
 app.locals.title = "Walk Through API"
 app.set('port', process.env.PORT || 3000)
 
-
+app.get('/', function(request, response) {
+  response.sendFile(path.join(__dirname+'/lib/views/apiDocs.html'))
+})
 
 
 app.get('/api/v1/walk_thrus', walkThru.getWalkThrus )
