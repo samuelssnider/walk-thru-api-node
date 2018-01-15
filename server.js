@@ -13,7 +13,7 @@ var category = require('./lib/controllers/categories')
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 var path    = require("path");
-
+app.use(express.static(path.join(__dirname, 'lib/styles')));
 
 
 // app.use(session({
