@@ -25,12 +25,16 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: {
+      database: 'wt_prod',
+      user:     'sam',
+      password: 'sam'
+    }
     migrations: {
       directory: './db/migrations'
     },
     seeds: {
-      directory: './db/seeds/production'
+      directory: './db/seeds'
     },
     useNullAsDefault: true
   }
