@@ -21,3 +21,6 @@ Now start up your server, and visit http://localhost:3000/ to veiw the API docum
 ```
 npm start
 ```
+
+
+If you would like to contribute, let me know by opening an issue, commenting on an issue, or submitting a PR.
