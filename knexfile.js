@@ -26,10 +26,9 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-            database: 'my_db',
-            user: 'username',
-            password: 'password'
+            database: 'walk_thrus_prod',
         },
+    debug: true,
     migrations: {
       directory: './db/migrations'
     },
