@@ -25,16 +25,13 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: {
-      database: 'postgres://kxqvuxeukkbpvp:5c92997d95e3a058d6cbfceb00fd17aefcab836e73f3c8f3d7df721e75ae1937@ec2-23-21-246-25.compute-1.amazonaws.com:5432/dbfdaqn2tdpngl',
-      user:     'username',
-      password: 'password'
-    },
+    connection: 'postgres://damnbkjxpwkmdy:4c03254f7413cfcfda6876bd79043f66fbf7a68c57bba1aec08abe61d655f2f2@ec2-54-227-250-33.compute-1.amazonaws.com:5432/df7fk7hlbsb26r',
+    debug: true,
     migrations: {
       directory: './db/migrations'
     },
     seeds: {
-      directory: './db/seeds'
+      directory: './db/seeds/dev'
     },
     useNullAsDefault: true
   }
