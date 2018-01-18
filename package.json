@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.1",
+    "bookshelf-cascade-delete": "^2.0.1",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "faker": "^4.1.0",

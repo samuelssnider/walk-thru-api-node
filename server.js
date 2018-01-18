@@ -17,6 +17,9 @@ var path    = require("path");
 app.use(express.static(path.join(__dirname, 'lib/styles')));
 
 
+
+
+
 // app.use(session({
 //   name: 'server-session-cookie-id',
 //   secret: 'my express secret',
