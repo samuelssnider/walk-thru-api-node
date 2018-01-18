@@ -16,12 +16,12 @@ exports.seed = function(knex, Promise) {
   .then(function () {
     return knex.raw('TRUNCATE users RESTART IDENTITY CASCADE')
   })
-  .then(function () {
-    return knex.raw('TRUNCATE categories RESTART IDENTITY CASCADE')
-  })
-  .then(function () {
-    return knex.raw('TRUNCATE wt_categories RESTART IDENTITY CASCADE')
-  })
+  // .then(function () {
+  //   return knex.raw('TRUNCATE categories RESTART IDENTITY CASCADE')
+  // })
+  // .then(function () {
+  //   return knex.raw('TRUNCATE wt_categories RESTART IDENTITY CASCADE')
+  // })
   .then(function () {
     return knex('walk_thrus').insert(walkThrus['walkThrus']);
   })
@@ -34,10 +34,10 @@ exports.seed = function(knex, Promise) {
   .then(function () {
     return knex('users').insert(users['users']);
   })
-  .then(function () {
-    return knex('categories').insert(categories['categories']);
-  })
-  .then(function () {
-    return knex('wt_categories').insert(wt_categories['wt_categories']);
-  })
+  // .then(function () {
+  //   return knex('categories').insert(categories['categories']);
+  // })
+  // .then(function () {
+  //   return knex('wt_categories').insert(wt_categories['wt_categories']);
+  // })
 };
