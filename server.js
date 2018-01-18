@@ -10,6 +10,7 @@ app.set('port', process.env.PORT || 3999);
 var walkThru = require('./lib/controllers/walk_thrus')
 var step = require('./lib/controllers/steps')
 var category = require('./lib/controllers/categories')
+var instruction = require('./lib/controllers/instructions')
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 var path    = require("path");
@@ -50,11 +51,13 @@ app.get('/api/v1/walk_thrus/:id', walkThru.getWalkThru )
 
 app.post('/api/v1/walk_thrus', walkThru.createWalkThru )
 
-app.post('/api/v1/steps', step.createStep )
-
 app.get('/api/v1/steps/:id', step.getStep )
 
+app.post('/api/v1/steps', step.createStep )
+
 app.get('/api/v1/categories', category.getCategories )
+
+app.post('/api/v1/instructions', instruction.createInstruction )
 
 if (!module.parent) {
   app.listen(app.get('port'), function() {
