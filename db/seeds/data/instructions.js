@@ -6,7 +6,7 @@ function generateRandomInstruction(i) {
     title: faker.name.findName(i),
     content: faker.lorem.sentence(i),
     created_at: new Date,
-    stepid: (Math.floor(Math.random() * 3)) + 1
+    stepid: (Math.floor(Math.random() * 9)) + 1
   }
 }
 
