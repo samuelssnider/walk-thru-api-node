@@ -45,11 +45,15 @@ app.get('/', function(request, response) {
 })
 
 
+// app.put('/api/v1/walk_thrus/:id', walkThru.updateWalkThru)
+
 app.get('/api/v1/walk_thrus', walkThru.getWalkThrus )
 
 app.get('/api/v1/walk_thrus/:id', walkThru.getWalkThru )
 
 app.post('/api/v1/walk_thrus', walkThru.createWalkThru )
+
+app.delete('/api/v1/walk_thrus/:id', walkThru.deleteWalkThru )
 
 app.get('/api/v1/steps/:id', step.getStep )
 

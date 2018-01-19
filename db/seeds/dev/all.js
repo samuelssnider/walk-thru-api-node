@@ -34,10 +34,10 @@ exports.seed = function(knex, Promise) {
   .then(function () {
     return knex('users').insert(users['users']);
   })
-  .then(function () {
-    return knex('categories').insert(categories['categories']);
-  })
-  .then(function () {
-    return knex('wt_categories').insert(wt_categories['wt_categories']);
-  })
+  // .then(function () {
+  //   return knex('categories').insert(categories['categories']);
+  // })
+  // .then(function () {
+  //   return knex('wt_categories').insert(wt_categories['wt_categories']);
+  // })
 };
